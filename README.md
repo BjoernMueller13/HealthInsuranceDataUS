@@ -144,7 +144,7 @@ The following images are included in the repository. Each one can be described i
 <tr>
 <td width="30%" valign="middle">
 
-**Observation**  
+**Distribution of Sex, Regions, Smokers and Children**  
 - Relatively even distribution between sex and region  
 - Uneven distribution between  
   - Smokers  
@@ -170,7 +170,7 @@ The following images are included in the repository. Each one can be described i
 <tr>
 <td width="30%" valign="middle">
 
-**Observation**  
+**Distribution of Smokers per Region**  
 - No great variation of smokers by region  
 - Small outlier: Southeast  
 
@@ -189,7 +189,7 @@ The following images are included in the repository. Each one can be described i
 <tr>
 <td width="30%" valign="middle">
 
-**Observation**  
+**Distribution of Smokers per Sex**  
 - Relatively even distribution of smokers at a certain sex  
 - Males slightly higher than females  
 
@@ -213,13 +213,13 @@ The following images are included in the repository. Each one can be described i
 <tr>
 <td width="30%" valign="middle">
 
-**Observation**  
+**Correlation Heatmaps**  
 Look on heatmap → lowest horizontal line  
 - Greatest impact by age and BMI  
 - Low impact by number of children  
 
 </td>
-<td width="55%" align="center">
+<td width="45%" align="center">
 
 <img src="images/CORRELATION_HEATMAP.png" alt="Correlation Heatmap" width="600"/>  
 
@@ -238,7 +238,7 @@ Look on heatmap → lowest horizontal line
 <tr>
 <td width="30%" valign="middle">
 
-**Observation**  
+**Charges per Sex**  
 - Impact by sex is evenly distributed by male and female  
 - Age is a higher impact  
 
@@ -257,7 +257,7 @@ Look on heatmap → lowest horizontal line
 <tr>
 <td width="30%" valign="middle">
 
-**Observation**  
+**Charges per smokers / non-smokers**  
 - Critical impact by smoking  
 - Age has an impact, too  
 
@@ -276,7 +276,7 @@ Look on heatmap → lowest horizontal line
 <tr>
 <td width="30%" valign="middle">
 
-**Observation**  
+**Charges per Number of Children**  
 - Number of children has almost no impact until a number of 3  
 - Great decrease at 4 and 5 children  
 - Great impact by smoking  
@@ -321,7 +321,7 @@ Look on heatmap → lowest horizontal line
 <tr>
 <td width="30%" valign="middle">
 
-**Observation**  
+**Charges by BMI and Region**  
 - No underweight people in southeast  
 - Highest charges for obesity  
 - Tie 2nd highest charges for normal and overweight  
@@ -342,7 +342,7 @@ Look on heatmap → lowest horizontal line
 <tr>
 <td width="30%" valign="middle">
 
-**Clustering**  
+**Clustering - Risk Level & Age**  
 - Clustering to risk level:  
   - High risk: Obesity + Smoker  
   - Moderate risk: normal/overweight + smoker  
@@ -368,7 +368,7 @@ Look on heatmap → lowest horizontal line
 <tr>
 <td width="30%" valign="middle">
 
-**Observations**  
+**Charges per Age Type & Risk**  
 - Charges increase with risk level  
 - Age has greater impact  
 
@@ -385,7 +385,7 @@ Look on heatmap → lowest horizontal line
 
 <table>
 <tr>
-<td width="30%" valign="middle">
+<td width="50%" valign="middle">
 
 **KEY FINDINGS**  
 
@@ -400,12 +400,31 @@ Look on heatmap → lowest horizontal line
   - Smokers  
   - Region  
 
+</td>
+<td width="50%" valign="middle">
+
 *Insights*  
 - Smoking has a high impact on charges  
 - Also, obesity affects charges heavily  
 - Charges rise continuously per age  
 - Regional distribution of the factors including the sex mentioned above is relatively evenly done  
 - Low impact on charges by the number of children  
+
+</td>
+</tr>
+</table>
+
+---
+
+<table>
+<tr>
+<td width="30%" valign="middle">
+
+**Linear Regression**  
+
+*Key Points*  
+- Mean Squared Error: 0.285
+- R-squared (R²) on Test Set: 0.715
 
 </td>
 <td width="70%" align="center">
@@ -415,7 +434,6 @@ Look on heatmap → lowest horizontal line
 </td>
 </tr>
 </table>
-
 
 ---
 
