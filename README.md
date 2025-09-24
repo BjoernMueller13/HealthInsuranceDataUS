@@ -107,8 +107,8 @@ The following images are included in the repository. Each one can be described i
 - 9 Outliers at BMI
 - Over 100 Outliers at Charges
 
-![Age, BMI, Charges Boxplots](images/_AGE%20BOXPLOT_BMI%20BOXPLOT_CHARGES%20BOXPLOT.png)  
-![Age, BMI, Charges Distributions](images/_AGE%20DISTRIBUTION_BMI%20DISTRIBUTION_CHARGES%20DISTRIBUTION.png) 
+![Age, BMI, Charges Boxplots](images/AGE_BOXPLOT_BMI_BOXPLOT_CHARGES_BOXPLOT.png)  
+![Age, BMI, Charges Distributions](images/AGE_DISTRIBUTION_BMI_DISTRIBUTION_CHARGES_DISTRIBUTION.png)  
 
 *Observation*
 - Relatively even distribution between sex and region
@@ -116,47 +116,114 @@ The following images are included in the repository. Each one can be described i
   - Smokers
   - Children (w/ has a far higher concentration)
 
-![Sex, Region, Smoker, Children Distributions](images/_SEX%20DISTRIBUTION_REGION%20DISTRIBUTION_SMOKER%20DISTRIBUTION_CHILDREN%20DISTRIBUTION.png)  
-![Distribution of Sex, Regions, Smokers, Children](images/_DISTRIBUTION%20OF%20SEX_DISTRIBUTION%20OF%20REGIONS_DISTRIBUTION%20OF%20SMOKERS_DISTRIBUTION%20OF%20CHILDREN.png) 
+![Distribution of Sex, Regions, Smokers, Children](images/DISTRIBUTION_OF_SEX_DISTRIBUTION_OF_REGIONS_DISTRIBUTION_OF_SMOKERS_DISTRIBUTION_OF_CHILDREN.png)  
+![Sex, Region, Smoker, Children Distributions](images/SEX_DISTRIBUTION_REGION_DISTRIBUTION_SMOKER_DISTRIBUTION_CHILDREN_DISTRIBUTION.png)  
 
 *Observation*
 - No great variation of smokers by region
 - Small outlier: Southeast
 
-![Smokers by Region](images/_SMOKERS%20AT%20NORTHEAST_SMOKERS%20AT%20NORTHWEST_SMOKERS%20AT%20SOUTHEAST_SMOKERS%20AT%20SOUTHWEST.png)  
+![Smokers by Region](images/SMOKERS_AT_NORTHEAST_SMOKERS_AT_NORTHWEST_SMOKERS_AT_SOUTHEAST_SMOKERS_AT_SOUTHWEST.png)  
 
 *Observation*
 - Relatively even distribution of smokers at a certain sex
 - Males slightly higher than females
 
-![Smokers by Males/Females](images/_SMOKERS%20AT%20MALES_SMOKERS%20AT%20FEMALES.png)  
-![Distribution of Smokers by Sex](images/DISTRIBUTION%20OF%20SMOKERS%20BY%20SEX.png)  
+![Smokers at Males / Females](images/SMOKERS_AT_MALES_SMOKERS_AT_FEMALES.png)  
+![Distribution of Smokers by Sex](images/DISTRIBUTION_OF_SMOKERS_BY_SEX.png)   
 
 *Observation*
 Look on heatmap → lowest horizontal line
 - Greatest impact by age and BMI
 - Low impact by number of children
 
-![Correlation Heatmap](images/CORRELATION%20HEATMAP.png)  
+![Correlation Heatmap](images/CORRELATION_HEATMAP.png)  
+![Correlation Heatmap (Graphs)](images/CORRELATION_HEATMAP_GRAPHS.png)  
 
-Observation
- Impact by sex is evenly distributed by male and female
- Age is a higher impact
-* IMAGE "RELATIONSHIP: CHARGES PER SEX" TO BE UPLOADED *
+*Observation*
+- Impact by sex is evenly distributed by male and female
+- Age is a higher impact
+  
+![Relationship - Charges per Sex](images/RELATIONSHIP_-_CHARGES_PER_SEX.png)  
+
+*Observation*
+- Critical impact by smoking
+- Age has an impact, too
+  
+![Relationship - Charges of Smokers & Non-Smokers](images/RELATIONSHIP_-_CHARGES_OF_SMOKERS_&_CHARGES_OF_NON-SMOKERS.png) 
+
+*Observation*
+- Number of children has almost no impact until a number of 3
+- Great decrease at 4 and 5 children
+- Great impact by smoking
+  
+![Charges by Number of Children](images/CHARGES_BY_NUMBER_OF_CHILDREN.png)  
+
+*Clustering of BMI according to current standards:*
+- BMI > 18.5 → Underweight
+- 18.5 < BMI < 25 → Normal Weight
+- 25 =< BMI < 30 → Overweight
+- 30 < BMI → Obesity
+
+*Observation*
+- High percentage of obesity and overweight
+- Keep in mind: BMI one of the highest impacts on charges
+
+![Distribution of BMI Type](images/Distribution_of_BMI_Type.png)  
+
+*Observation*
+- No underweight people in southeast
+- Highest charges for obesity
+- Tie 2nd highest charges for normal and overweight
+  - Assumption: affect by smokers
+
+![Charges by BMI and Region](images/CHARGES_BY_BMI_AND_REGION.png)  
+
+*Clustering*
+- Clustering to risk level:
+  - High risk: Obesity + Smoker
+  - Moderate risk: normal/overweight + smoker
+  - Else: low risk
+    
+- Clustering by age:
+  - Age < 30 years
+  - 30 years < Age < 50 years
+  - Age > 50 years
+
+![Distribution of Risk Type](images/DISTRIBUTION_OF_RISK_TYPE.png)  
+
+*Observations*
+- Charges increase with risk level
+- Age as greater impact
+
+![Charges by Age Type and Risk](images/CHARGES_BY_AGE_TYPE_AND_RISK.png)  
+
+*KEY FINDINGS*
+Findings (Data Distribution):
+
+- Outliers:
+  - BMI: 9
+  - Charges: > 100 + Skew to the right
+
+- More or less balanced distribution per
+  - Age
+  - Sex
+  - Smokers
+  - Region
+
+Insights
+- Smoking has a high impact on charges
+- Also, obesity affects charges heavily
+- Charges rise continuously per age
+- Regional distribution of the factors including the sex mentioned above is relatively evenly done
+- Low impact on charges by the number of children
 
 
-![Charges by Age Type and Risk](images/CHARGES%20BY%20AGE%20TYPE%20AND%20RISK.png)  
-![Charges by BMI and Region](images/CHARGES%20BY%20BMI%20AND%20REGION.png)  
-![Charges by Number of Children](images/CHARGES%20BY%20NUMBER%20OF%20CHILDREN.png)  
+*Linear Regression*
+- Mean Squared Error: 0.285
+- R-squared (R²) on Test Set: 0.715
 
-
- 
-![Distribution of BMI Type](images/_Distribution%20of%20BMI%20Type.png)  
-![Distribution of Risk Type](images/_DISTRIBUTION%20OF%20RISK%20TYPE.png)  
- 
-
-
-
+![Predicted vs. Actual Values](images/PREDICTED_VS._ACTUAL_VALUES.png)   
 
 ---
 
